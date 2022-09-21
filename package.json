@@ -4,16 +4,16 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@types/react": "^18.0.18",
     "typescript": "^4.6.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@type-challenges/utils": "^0.1.1",
+    "typescript": "^4.4.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@type-challenges/utils": "^0.1.1",
-    "typescript": "^4.4.2"
-  }
+  "license": "ISC"
 }
