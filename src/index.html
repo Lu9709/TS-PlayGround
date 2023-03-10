@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<section>
+    <div></div>
+    <div></div>
+    <strong>Click Here for Survey</strong>
+</section>
+</body>
+</html>
+<style type="text/css">
+section  {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px;
+}
+section > *  {
+    width: inherit;
+    height: inherit;
+    grid-area: 1 / 1;
+}
+section > div:nth-child(1) {
+    background: linear-gradient(to right, red, orange);
+}
+section > div:nth-child(2)  {
+    --gt: linear-gradient(black, black);
+    --n: 100px;
+    --h: calc(var(--n) - 5px);
+    background: var(--gt) top right,
+    var(--gt) top var(--n) right,
+    var(--gt) top calc(var(--n) * 2) right,
+    var(--gt) top calc(var(--n) * 3) right,
+    var(--gt) top calc(var(--n) * 4) right,
+    beige;
+    background-size: 60% var(--h), 90% var(--h), 70% var(--h), 40% var(--h), 10% var(--h);
+    mix-blend-mode: screen;
+    background-repeat: no-repeat;
+    transition: background-size 1s;
+}
+section:hover > div:nth-child(2)  {
+    background-size: 100% var(--h);
+    transition: background-size 1s;
+}
+strong  {
+    height: max-content;
+    text-align: center;
+    isolation: isolate;
+    font-family: 'bungee shade';
+    font-size: 95px;
+    color: maroon;
+}
+body  {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    margin: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+@media (max-width:500px){
+    section {
+        width: 90vw;
+        transform: scale(.9);
+    }
+
+    strong{
+        font-size: calc(12px + 12vw);
+    }
+}
+</style>
