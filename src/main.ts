@@ -57,37 +57,4 @@ function debounceTest (fn: Function, time: number) {
   }
 }
 
-export interface OptionItem{
-  answer: string;
-  code: string;
-  isAnswer?: boolean;
-  questionCode?: string;
-  sort?: string;
-  title?: string;
-}
 
-export  interface List<V> {
-  [key: string]: V
-}
-
-
-export const initaloptionList: List<OptionItem[]> = {
-  20: [{
-    answer: '',
-    code: getUUID(),
-    isAnswer: false,
-    sort: 'A',
-  }],
-  10: [
-    {
-      answer: '正确',
-      code: getUUID(),
-      isAnswer: false
-    },
-    {
-      answer: '错误',
-      code: getUUID(),
-      isAnswer: false
-    }
-  ]
-}
